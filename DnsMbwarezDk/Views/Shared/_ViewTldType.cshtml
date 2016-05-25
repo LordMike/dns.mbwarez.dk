@@ -1,0 +1,18 @@
+﻿@using WebShared.Db
+@model WebShared.Db.TldType
+
+@switch (Model)
+{
+    case TldType.Root:
+        <span>Root</span>
+        break;
+    case TldType.CcTld:
+        <span>ccTLD</span>
+        break;
+    case TldType.GTld:
+        <span>gTLD</span>
+        break;
+    default:
+        <span><i>unknown</i></span>
+        break;
+}

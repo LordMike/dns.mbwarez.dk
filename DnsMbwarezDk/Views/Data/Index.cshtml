@@ -1,0 +1,122 @@
+﻿@using DnsMbwarezDk.Code
+@using WebShared.Db
+@model DnsMbwarezDk.Models.Data.DataIndexModel
+
+@{
+    ViewBag.Title = "DNS TLD Data";
+}
+
+<h2>Currrent TLD's <small>(@Model.States.Count)</small></h2>
+
+@using (Html.BeginForm())
+{
+    <div class="col-md-12 well well-sm">
+        <div class="col-md-4">
+            @Html.TextBoxFor(s => s.FilterText, new { @class = "form-control", placeholder = "Freetext search" })
+        </div>
+        <div class="col-md-7">
+            <div class="col-md-2">
+                @Html.CheckBoxFor(s => s.FilterAxfr) AXFR
+            </div>
+            <div class="col-md-2">
+                <div>@Html.CheckBoxFor(s => s.FilterNsec) NSEC</div>
+                <div>@Html.CheckBoxFor(s => s.FilterNsec3) NSEC3</div>
+            </div>
+            <div class="col-md-2">
+                <div>@Html.CheckBoxFor(s => s.FilterFtp) FTP</div>
+                <div>@Html.CheckBoxFor(s => s.FilterRsync) Rsync</div>
+            </div>
+            <div class="col-md-3">
+                @Html.CheckBoxFor(s => s.FilterIssues) with issues
+            </div>
+            <div class="col-md-3">
+                <div>@Html.CheckBoxFor(s => s.FilterLevelFirst) show 1st-level</div>
+                <div>@Html.CheckBoxFor(s => s.FilterLevelSecond) show 2nd-level</div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button type="submit" class="btn btn-primary">Filter!</button>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>TLD</th>
+                    <th>(IDN)</th>
+                    <th>Contact</th>
+                    <th>Prot.</th>
+                    <th>Feature</th>
+                    <th></th>
+                    <th>Servers</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (TldDomain domain in Model.States)
+                {
+                    <tr>
+                        <td>@Html.Partial("_ViewTldLevel", domain.DomainLevel)</td>
+                        <td>@domain.Domain</td>
+                        <td>@HtmlUtilities.DomainToIdn(domain.Domain)</td>
+                        <td>
+                            @HtmlUtilities.DomainToEmail(domain.MasterResponsibleName)
+                        </td>
+                        <td>
+                            @if (domain.Servers.Any(x => x.Test.FeatureSet.SupportsUdp))
+                            {
+                                @Html.Partial("_ViewProtocol", "UDP")
+                            }
+                            @if (domain.Servers.Any(x => x.Test.FeatureSet.SupportsTcp))
+                            {
+                                @Html.Partial("_ViewProtocol", "TCP")
+                            }
+                            @if (domain.Servers.Any(x => x.Test.FeatureSet.SupportsTcpFtp))
+                            {
+                                @Html.Partial("_ViewProtocol", "FTP")
+                            }
+                            @if (domain.Servers.Any(x => x.Test.FeatureSet.SupportsTcpRsync))
+                            {
+                                @Html.Partial("_ViewProtocol", "Rsync")
+                            }
+                        </td>
+                        <td>
+                            @if (domain.Servers.Any(x => x.Test.FeatureSet.SupportsAxfr))
+                            {
+                                @Html.Partial("_ViewFeature", "AXFR")
+                            }
+                            @if (domain.Servers.Any(x => x.Test.FeatureSet.SupportsNsec))
+                            {
+                                @Html.Partial("_ViewFeature", "NSEC")
+                            }
+                            @if (domain.Servers.Any(x => x.Test.FeatureSet.SupportsNsec3))
+                            {
+                                @Html.Partial("_ViewFeature", "NSEC3")
+                            }
+                        </td>
+                        <td>
+                            @if (domain.Servers.Any(s => s.ServerType == ServerType.IPv4))
+                            {
+                                @Html.Partial("_ViewIpType", ServerType.IPv4)
+                            }
+                            @if (domain.Servers.Any(s => s.ServerType == ServerType.IPv6))
+                            {
+                                @Html.Partial("_ViewIpType", ServerType.IPv6)
+                            }
+                        </td>
+                        <td>
+                            @domain.Servers.Count
+                            @if (domain.Servers.Any(s => !s.Refresh.LastCheckSuccess))
+                            {
+                                <text>(@domain.Servers.Count(s => s.Refresh.LastCheckSuccess))</text>
+                            }
+                        </td>
+                        <td>@Html.ActionLink("details", "View", "Data", new { id = HtmlUtilities.PrepTldForUrl(domain.Domain) }, null)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

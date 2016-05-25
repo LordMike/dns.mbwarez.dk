@@ -1,0 +1,1353 @@
+bb.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bb
+second co.bb. com.bb. net.bb. org.bb. gov.bb. edu.bb. info.bb. store.bb. tv.bb. biz.bb.
+
+bd.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bd
+second com.bd. edu.bd. ac.bd. net.bd. gov.bd. org.bd. mil.bd.
+
+bj.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bj
+second gouv.bj. mil.bj. edu.bj. gov.bj. asso.bj. barreau.bj. com.bj.
+
+bm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bm
+second com.bm. edu.bm. gov.bm. net.bm. org.bm.
+
+bn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bn
+second com.bn. edu.bn. gov.bn. net.bn. org.bn.
+
+bo.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bo
+second com.bo. net.bo. org.bo. tv.bo. mil.bo. int.bo. gob.bo. edu.bo.
+
+br.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.br
+second blog.br. coop.br. am.br. b.br. adm.br. adv.br. agr.br. arq.br. art.br. ato.br. bio.br. bmd.br. cim.br. cng.br. cnt.br. com.br. ecn.br. edu.br. eng.br. esp.br. etc.br. eti.br. far.br. flog.br. fm.br. fnd.br. fot.br. fst.br. g12.br. ggf.br. gov.br. imb.br. ind.br. inf.br. jor.br. jus.br. leg.br. lel.br. mat.br. med.br. mil.br. mus.br. net.br. nom.br. not.br. ntr.br. odo.br. org.br. ppg.br. pro.br. psc.br. psi.br. qsl.br. radio.br. rec.br. slg.br. srv.br. taxi.br. teo.br. tmp.br. trd.br. tur.br. tv.br. vet.br. vlog.br. wiki.br. zlg.br.
+
+bs.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bs
+second com.bs. net.bs. org.bs. edu.bs. gov.bs. we.bs.
+
+bw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bw
+second co.bw. org.bw.
+
+bz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bz
+second com.bz. edu.bz. gov.bz. net.bz. org.bz.
+
+ca.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ca
+second ab.ca. bc.ca. mb.ca. nb.ca. nf.ca. nl.ca. ns.ca. nt.ca. nu.ca. on.ca. pe.ca. qc.ca. sk.ca. yk.ca.
+
+cc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cc
+second com.cc. net.cc. edu.cc. org.cc. cc.cc. co.cc. cu.cc. cz.cc.
+# gov.cu.cc
+
+cd.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cd
+second com.cd. net.cd. org.cd.
+
+ci.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ci
+second org.ci. or.ci. com.ci. co.ci. edu.ci. ed.ci. ac.ci. net.ci. go.ci. int.ci.
+
+ck.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ck
+second co.ck. org.ck. edu.ck. gov.ck. net.ck. gen.ck. biz.ck. info.ck.
+
+cn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cn
+second ac.cn. com.cn. edu.cn. gov.cn. mil.cn. net.cn. org.cn.
+
+co.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.co
+second com.co. org.co. edu.co. gov.co. net.co. mil.co. nom.co.
+
+cr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cr
+second ac.cr. co.cr. ed.cr. fi.cr. go.cr. or.cr. sa.cr.
+
+cu.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cu
+second com.cu. edu.cu. org.cu. net.cu. gov.cu. inf.cu.
+
+cv.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cv
+second net.cv. gov.cv. org.cv. edu.cv. int.cv. com.cv. nome.cv. publ.cv.
+
+cy.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cy
+second ac.cy. net.cy. gov.cy. org.cy. pro.cy. name.cy. ekloges.cy. tm.cy. ltd.cy. biz.cy. press.cy. parliament.cy. com.cy.
+
+dm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.dm
+second com.dm. net.dm. org.dm.
+
+do.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.do
+second art.do. com.do. edu.do. gob.do. gov.do. mil.do. net.do. org.do. sld.do.
+
+dz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.dz
+second com.dz. org.dz. net.dz. gov.dz. edu.dz. pol.dz. art.dz. asso.dz.
+
+ec.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ec
+second com.ec. info.ec. net.ec. fin.ec. med.ec. pro.ec. org.ec. edu.ec. gob.ec. gov.ec. mil.ec.
+
+ee.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ee
+second com.ee. pri.ee. fie.ee. med.ee. edu.ee. lib.ee. org.ee.
+
+eg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.eg
+second com.eg. edu.eg. eun.eg. gov.eg. mil.eg. net.eg. org.eg. sci.eg. tv.eg. info.eg. name.eg.
+
+er.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.er
+second com.er. edu.er. gov.er. mil.er. net.er. org.er. ind.er.
+
+es.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.es
+second com.es. nom.es. org.es. gob.es. edu.es.
+
+et.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.et
+second com.et. gov.et. org.et. edu.et. net.et. biz.et. name.et. info.et.
+
+fj.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.fj
+second info.fj. name.fj. ac.fj. biz.fj. com.fj. mil.fj. net.fj. org.fj. pro.fj.
+
+fk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.fk
+second co.fk. org.fk. gov.fk. ac.fk. nom.fk. net.fk.
+
+ga.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ga
+second md.ga. presse.ga. gouv.ga. go.ga. org.ga. or.ga. com.ga. co.ga. edu.ga. ed.ga. ac.ga. net.ga. xn--aroport-bya.ga. int.ga.
+
+ge.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ge
+second com.ge. edu.ge. gov.ge. org.ge. mil.ge. net.ge. pvt.ge.
+
+gg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gg
+second co.gg. net.gg. org.gg.
+
+gh.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gh
+second com.gh. edu.gh. gov.gh. mil.gh. net.gh. org.gh.
+
+gm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gm
+second org.gm. gov.gm. edu.gm. mil.gm. com.gm.
+
+gn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gn
+second com.gn. ac.gn. gov.gn. org.gn. net.gn.
+
+gp.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gp
+second com.gp. net.gp. mobi.gp. edu.gp. asso.gp. org.gp.
+
+gq.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gq
+second org.gq. gov.gq. edu.gq. mil.gq. com.gq.
+
+gr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gr
+second com.gr. edu.gr. net.gr. org.gr. gov.gr. mil.gr. mod.gr. sch.gr. co.gr.
+
+gt.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gt
+second edu.gt. net.gt. gob.gt. org.gt. mil.gt. ind.gt.
+
+gu.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gu
+second com.gu. net.gu. gov.gu. org.gu. edu.gu.
+
+gy.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gy
+second co.gy. com.gy. org.gy. net.gy. edu.gy. gov.gy.
+
+hk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.hk
+second com.hk. xn--55qx5d.hk. org.hk. xn--uc0atv.hk. net.hk. xn--od0alg.hk. edu.hk. xn--wcvs22d.hk. gov.hk. xn--mxtq1m.hk. idv.hk.
+
+xn--j6w193g.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.hk
+second xn--55qx5d.xn--j6w193g. xn--uc0atv.xn--j6w193g. xn--od0alg.xn--j6w193g. xn--wcvs22d.xn--j6w193g. xn--mxtq1m.xn--j6w193g.
+
+hn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.hn
+second net.hn. org.hn. edu.hn. gob.hn. com.hn.
+
+hr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.hr
+second iz.hr. from.hr. com.hr.
+
+hu.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.hu
+second 2000.hu. agrar.hu. bolt.hu. casino.hu. city.hu. co.hu. erotica.hu. erotika.hu. film.hu. forum.hu. games.hu. hotel.hu. info.hu. ingatlan.hu. jogasz.hu. konyvelo.hu. lakas.hu. media.hu. net.hu. news.hu. org.hu. priv.hu. reklam.hu. sex.hu. shop.hu. sport.hu. suli.hu. szex.hu. tm.hu. tozsde.hu. utazas.hu. video.hu.
+
+id.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.id
+second ac.id. biz.id. co.id. desa.id. go.id. mil.id. my.id. net.id. or.id. sch.id. web.id.
+
+il.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.il
+second ac.il. co.il. org.il. net.il. k12.il. gov.il. idf.il. muni.il.
+
+im.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.im
+second ac.im. co.im. com.im. gov.im. net.im. org.im. ro.im.
+# ltd.co.im. plc.co.im.
+
+in.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.in
+second co.in. firm.in. net.in. org.in. gen.in. ind.in. ac.in. edu.in. res.in. ernet.in. gov.in. mil.in.
+
+iq.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.iq
+second gov.iq. edu.iq. com.iq. mil.iq. org.iq. net.iq.
+
+ir.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ir
+second ac.ir. co.ir. gov.ir. id.ir. net.ir. org.ir. sch.ir.
+
+it.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.it
+second gov.it. edu.it.
+
+je.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.je
+second co.je. net.je. org.je.
+
+jm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.jm
+second com.jm. net.jm. org.jm. edu.jm. gov.jm. mil.jm.
+
+jo.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.jo
+second com.jo. edu.jo. gov.jo. mil.jo. net.jo. org.jo. name.jo.
+
+jp.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.jp
+second ac.jp. ad.jp. co.jp. ed.jp. go.jp. gr.jp. lg.jp. ne.jp. or.jp.
+
+ke.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ke
+second co.ke. or.ke. ne.ke. go.ke. ac.ke. sc.ke. me.ke. mobi.ke. info.ke.
+
+kg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kg
+second org.kg. net.kg. com.kg. edu.kg. gov.kg. mil.kg.
+
+kh.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kh
+second per.kh. com.kh. edu.kh. gov.kh. mil.kh. net.kh. org.kh.
+
+km.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.km
+second com.km. coop.km. asso.km. nom.km. presse.km. tm.km. medecin.km. notaires.km. pharmaciens.km. veterinaire.km. edu.km. gouv.km. mil.km.
+
+kn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kn
+second net.kn. org.kn. edu.kn. gov.kn.
+
+kr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kr
+second co.kr. ne.kr. or.kr. re.kr. pe.kr. go.kr. mil.kr. ac.kr. hs.kr. ms.kr. es.kr. sc.kr. kg.kr. seoul.kr. busan.kr. daegu.kr. incheon.kr. gwangju.kr. daejeon.kr. ulsan.kr. gyeonggi.kr. gangwon.kr. chungbuk.kr. chungnam.kr. jeonbuk.kr. jeonnam.kr. gyeongbuk.kr. gyeongnam.kr. jeju.kr. xn--bj0bj06e.kr.
+
+kw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kw
+second edu.kw. com.kw. net.kw. org.kw. gov.kw.
+
+ky.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ky
+second com.ky. org.ky. net.ky. edu.ky. gov.ky.
+
+kz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kz
+second com.kz. edu.kz. gov.kz. mil.kz. net.kz. org.kz.
+
+lb.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lb
+second com.lb. edu.lb. gov.lb. net.lb. org.lb.
+
+lk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lk
+second gov.lk. sch.lk. net.lk. int.lk. com.lk. org.lk. edu.lk. ngo.lk. soc.lk. web.lk. ltd.lk. assn.lk. grp.lk. hotel.lk.
+
+lr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lr
+second com.lr. edu.lr. gov.lr. org.lr. net.lr.
+
+ls.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ls
+second ac.ls. co.ls. gov.ls. net.ls. nul.ls. org.ls. parliament.ls.
+
+lv.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lv
+second com.lv. edu.lv. gov.lv. org.lv. mil.lv. net.lv. asn.lv. id.lv. conf.lv.
+
+ly.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ly
+second com.ly. net.ly. gov.ly. plc.ly. edu.ly. sch.ly. med.ly. org.ly. id.ly.
+
+ma.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ma
+second net.ma. ac.ma. org.ma. gov.ma. press.ma. co.ma.
+
+mc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mc
+second tm.mc. asso.mc.
+
+md.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.md
+second com.md. org.md. info.md. pro.md. gov.md. edu.md. din.md.
+
+me.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.me
+second co.me. net.me. org.me. edu.me. ac.me. gov.me. its.me. priv.me.
+
+mg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mg
+second org.mg. nom.mg. gov.mg. prd.mg. tm.mg. edu.mg. mil.mg. com.mg. in.mg.
+
+mk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mk
+second com.mk. org.mk. net.mk. edu.mk. gov.mk. inf.mk.
+
+ml.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ml
+second net.ml. org.ml. edu.ml. gov.ml. presse.ml.
+
+mm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mm
+second edu.mm. org.mm. gov.mm. net.mm. com.mm.
+
+mn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mn
+second gov.mn. edu.mn. org.mn.
+
+mo.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mo
+second com.mo. edu.mo. gov.mo. net.mo. org.mo.
+
+mp.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mp
+second gov.mp. org.mp. co.mp.
+
+mr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mr
+second gov.mr.
+
+ms.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ms
+second com.ms. edu.ms. gov.ms. net.ms. org.ms.
+
+mt.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mt
+second com.mt. org.mt. net.mt. edu.mt. gov.mt.
+
+mu.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mu
+second com.mu. net.mu. org.mu. biz.mu. edu.mu. gov.mu. ac.mu. co.mu. or.mu.
+
+mz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mz
+second adv.mz. ac.mz. co.mz. org.mz. gov.mz. edu.mz.
+
+mv.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mv
+second aero.mv. biz.mv. com.mv. coop.mv. edu.mv. gov.mv. info.mv. int.mv. mil.mv. museum.mv. name.mv. net.mv. org.mv. pro.mv.
+
+mw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mw
+second ac.mw. co.mwcom.mw. coop.mw. edu.mw. gov.mw. int.mw. museum.mw. net.mw. org.mw.
+
+mx.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mx
+second com.mx. net.mx. org.mx. ngo.mx. edu.mx. gob.mx.
+
+na.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.na
+second co.na. com.na.
+
+nc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.nc
+second asso.nc.
+
+nf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.nf
+second com.nf. net.nf. arts.nf. store.nf. web.nf. firm.nf. info.nf. other.nf. per.nf. rec.nf.
+
+ng.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ng
+second com.ng. org.ng. gov.ng. edu.ng. net.ng. sch.ng. name.ng. mobi.ng. mil.ng.
+
+ni.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ni
+second gob.ni. co.ni. com.ni. ac.ni. edu.ni. org.ni. nom.ni. net.ni. mil.ni.
+
+no.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.no
+second dep.no. fhs.no. folkebibl.no. fylkesbibl.no. herad.no. idrett.no. kommune.no. mil.no. museum.no. uenorge.no. priv.no. stat.no. vgs.no.
+
+np.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.np
+second academy.np. accountants.np. actor.np. aero.np. agency.np. asia.np. associates.np. audio.np. bar.np. bargains.np. beer.np. bid.np. bike.np. bio.np. biz.np. black.np. blue.np. boutique.np. build.np. builders.np. buzz.np. cab.np. camera.np. camp.np. capital.np. cards.np. care.np. careers.np. cash.np. catering.np. center.np. ceo.np. christmas.np. clinic.np. clothing.np. club.np. codes.np. coffee.np. college.np. com.np. community.np. company.np. computer.np. cool.np. coop.np. country.np. credit.np. creditcard.np. dental.np. diamonds.np. edu.np. email.np. engineering.np. estate.np. events.np. expert.np. finance.np. financial.np. fish.np. fishing.np. fitness.np. flights.np. florist.np. fund.np. furniture.np. futbol.np. gallery.np. gov.np. guitars.np. guru.np. hiphop.np. hiv.np. house.np. industries.np. info.np. ink.np. jobs.np. limited.np. link.np. management.np. marketing.np. media.np. menu.np. mil.np. mobi.np. museum.np. name.np. net.np. ninja.np. onl.np. org.np. partners.np. parts.np. photo.np. photos.np. pics.np. pink.np. pro.np. productions.np. products.np. properties.np. pub.np. red.np. rentals.np. repair.np. rest.np. rocks.np. services.np. shiksha.np. shoes.np. social.np. solar.np. solutions.np. space.np. supplies.np. supply.np. support.np. surf.np. surgery.np. systems.np. tattoo.np. tax.np. technology.np. tel.np. tips.np. today.np. tools.np. town.np. trade.np. training.np. travel.np. university.np. vacations.np. ventures.np. villas.np. vision.np. vodka.np. voting.np. voyage.np. watch.np. webcam.np. wiki.np. works.np. wtf.np. xyz.np. zone.np.
+
+nr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.nr
+second edu.nr. gov.nr. biz.nr. info.nr. net.nr. org.nr. com.nr.
+
+nz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.nz
+second ac.nz. co.nz. geek.nz. gen.nz. kiwi.nz. maori.nz. net.nz. org.nz. school.nz. cri.nz. govt.nz. health.nz. iwi.nz. mil.nz. parliament.nz.
+
+om.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.om
+second co.om. com.om. org.om. net.om. edu.om. gov.om. museum.om. pro.om. med.om.
+
+pa.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pa
+second net.pa. com.pa. ac.pa. sld.pa. gob.pa. edu.pa. org.pa. abo.pa. ing.pa. med.pa. nom.pa.
+
+pe.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pe
+second edu.pe. gob.pe. nom.pe. mil.pe. sld.pe. org.pe. ngo.pe. com.pe. net.pe.
+
+pf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pf
+second com.pf.
+
+pg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pg
+second com.pg. net.pg. ac.pg. gov.pg. mil.pg. org.pg.
+
+ph.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ph
+second com.ph. net.ph. org.ph.
+
+pk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pk
+second com.pk. net.pk. edu.pk. org.pk. fam.pk. biz.pk. web.pk. gov.pk. gok.pk. gob.pk. gkp.pk. gop.pk. gos.pk. gog.pk.
+
+pl.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pl
+second com.pl. biz.pl. net.pl. art.pl. edu.pl. gov.pl. info.pl. mil.pl. media.pl. org.pl. ngo.pl.
+
+pn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pn
+second in.pn. co.pn. eu.pn. org.pn. net.pn. me.pn.
+
+pr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pr
+second biz.pr. com.pr. edu.pr. gov.pr. info.pr. isla.pr. name.pr. net.pr. org.pr. pro.pr. est.pr. prof.pr. ac.pr.
+
+ps.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ps
+second com.ps. net.ps. org.ps. edu.ps. gov.ps. plo.ps. sec.ps.
+
+pt.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pt
+second com.pt. edu.pt. gov.pt. int.pt. net.pt. nome.pt. org.pt. publ.pt.
+
+py.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.py
+second com.py. coop.py. edu.py. mil.py. gov.py. org.py. net.py. una.py.
+
+qa.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.qa
+second com.qa. edu.qa. gov.qa. mil.qa. net.qa. org.qa.
+
+re.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.re
+second asso.re. nom.re. com.re.
+
+ro.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ro
+second arts.ro. com.ro. firm.ro. info.ro. nom.ro. nt.ro. org.ro. rec.ro. store.ro. tm.ro. www.ro.
+
+rs.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.rs
+second co.rs. org.rs. edu.rs. ac.rs. gov.rs. in.rs.
+
+sa.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sa
+second com.sa. edu.sa. sch.sa. med.sa. gov.sa. net.sa. org.sa. pub.sa.
+
+sb.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sb
+second com.sb. net.sb. edu.sb. org.sb. gov.sb.
+
+sc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sc
+second com.sc. net.sc. edu.sc. gov.sc. org.sc.
+
+sd.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sd
+second com.sd. net.sd. org.sd. edu.sd. med.sd. gov.sd. info.sd. tv.sd.
+
+se.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.se
+second org.se. pp.se. tm.se. parti.se. press.se.
+
+ru.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ru
+second ac.ru. com.ru. edu.ru. gov.ru. int.ru. mil.ru. net.ru. org.ru. pp.ru.
+
+sg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sg
+second com.sg. net.sg. org.sg. gov.sg. edu.sg. per.sg. idn.sg.
+
+sh.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sh
+second co.sh. com.sh. org.sh. gov.sh. edu.sh. net.sh. nom.sh.
+
+sl.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sl
+second com.sl. net.sl. org.sl. edu.sl. gov.sl.
+
+sn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sn
+second art.sn. com.sn. edu.sn. gouv.sn. org.sn. perso.sn. univ.sn.
+
+st.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.st
+second nic.st. gov.st. saotome.st. principe.st. consulado.st. embaixada.st. org.st. edu.st. net.st. com.st. store.st. mil.st. co.st.
+
+sv.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sv
+second edu.sv. gob.sv. com.sv. org.sv. red.sv.
+
+sy.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sy
+second edu.sy. gov.sy. net.sy. mil.sy. com.sy. org.sy. news.sy.
+
+sz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sz
+second co.sz. ac.sz. org.sz.
+
+th.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.th
+second ac.th. co.th. go.th. mi.th. or.th. net.th. in.th.
+
+xn--o3cw4h.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.th
+second xn--12c1fe0br.xn--o3cw4h. xn--12co0c3b4eva.xn--o3cw4h. xn--h3cuzk1di.xn--o3cw4h. xn--o3cyx2a.xn--o3cw4h. xn--12cfi8ixb8l.xn--o3cw4h. xn--m3ch0j3a.xn--o3cw4h.
+
+tj.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tj
+second ac.tj. aero.tj. biz.tj. co.tj. com.tj. coop.tj. dyn.tj. edu.tj. go.tj. gov.tj. info.tj. int.tj. mil.tj. museum.tj. my.tj. name.tj. net.tj. nic.tj. org.tj. per.tj. pro.tj. test.tj. web.tj.
+
+tl.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tl
+second gov.tl.
+
+tn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tn
+second com.tn. ens.tn. fin.tn. gov.tn. ind.tn. intl.tn. nat.tn. net.tn. org.tn. info.tn. perso.tn. tourism.tn. edunet.tn. rnrt.tn. rns.tn. rnu.tn. mincom.tn. agrinet.tn. defense.tn.
+
+to.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.to
+second gov.to. edu.to.
+
+tr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tr
+second com.tr. gen.tr. org.tr. biz.tr. info.tr. av.tr. dr.tr. pol.tr. bel.tr. tsk.tr. bbs.tr. k12.tr. edu.tr. name.tr. net.tr. gov.tr. web.tr. tel.tr. tv.tr. kep.tr.
+
+tt.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tt
+second co.tt. com.tt. org.tt. net.tt. biz.tt. info.tt. pro.tt. int.tt. coop.tt. jobs.tt. mobi.tt. travel.tt. museum.tt. aero.tt. cat.tt. tel.tt. name.tt.
+
+tv.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tv
+second gov.tv.
+
+tw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tw
+second edu.tw. gov.tw. mil.tw. com.tw. net.tw. org.tw. idv.tw. game.tw. ebiz.tw. club.tw.
+
+tz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tz
+second co.tz. ac.tz. go.tz. or.tz. mil.tz. sc.tz. ne.tz. hotel.tz. mobi.tz. tv.tz. me.tz. info.tz.
+
+ua.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ua
+second com.ua. edu.ua. gov.ua. net.ua. in.ua. at.ua. pp.ua. org.ua.
+
+ug.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ug
+second co.ug. ac.ug. sc.ug. go.ug. ne.ug. or.ug. org.ug. com.ug.
+
+uk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.uk
+second ac.uk. co.uk. gov.uk. judiciary.uk. ltd.uk. me.uk. mod.uk. net.uk. nhs.uk. nic.uk. org.uk. parliament.uk. plc.uk. police.uk. sch.uk.
+
+uy.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.uy
+second com.uy. edu.uy. gub.uy. net.uy. mil.uy. org.uy.
+
+uz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.uz
+second co.uz. com.uz. org.uz.
+
+.
+type Root
+wiki https://en.wikipedia.org/wiki/DNS_root_zone
+
+ac.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ac
+
+ad.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ad
+
+ae.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ae
+
+af.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.af
+
+ag.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ag
+second com.ag. org.ag. net.ag. co.ag.
+
+ai.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ai
+second off.ai. com.ai. org.ai. net.ai.
+
+al.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.al
+second uniti.al. tirana.al. soros.al. upt.al. inima.al.
+
+am.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.am
+second com.am. net.am. org.am.
+
+ao.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ao
+second it.ao.
+
+aq.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.aq
+
+ar.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ar
+second com.ar. edu.ar. gob.ar. gov.ar. int.ar. mil.ar. net.ar. org.ar. tur.ar.
+
+as.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.as
+
+at.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.at
+second co.at. or.at.
+
+au.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.au
+second com.au. net.au. org.au. gov.au. csiro.au. asn.au. id.au. 
+# Also in use by AU
+# act.gov.au. act.edu.au. nsw.gov.au. schools.nsw.edu.au. nt.gov.au. qld.gov.au. eq.edu.au. sa.gov.au. sa.edu.au. tas.gov.au. tas.edu.au. vic.gov.au. vic.edu.au. wa.gov.au. wa.edu.au. catholic.edu.au.
+
+aw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.aw
+second com.aw.
+
+ax.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ax
+
+az.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.az
+second com.az. net.az. int.az. gov.az. org.az. edu.az. info.az. pp.az. mil.az. name.az. pro.az. biz.az. co.az.
+
+ba.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ba
+
+be.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.be
+
+bf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bf
+
+bg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bg
+
+bh.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bh
+
+bi.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bi
+
+bt.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bt
+
+by.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.by
+
+cf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cf
+
+cg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cg
+
+ch.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ch
+
+cl.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cl
+
+cm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cm
+
+cw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cw
+
+cx.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cx
+
+cz.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cz
+
+de.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.de
+
+dj.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.dj
+
+dk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.dk
+
+eu.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.eu
+
+fi.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.fi
+
+fm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.fm
+
+fo.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.fo
+
+fr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.fr
+
+gd.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gd
+
+gf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gf
+
+gi.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gi
+second com.gi. ltd.gi. gov.gi. mod.gi. edu.gi. org.gi.
+
+gl.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gl
+
+gs.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gs
+
+gw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gw
+
+hm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.hm
+
+ht.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ht
+
+ie.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ie
+
+io.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.io
+
+is.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.is
+
+ki.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ki
+
+kp.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kp
+
+la.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.la
+
+lc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lc
+
+li.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.li
+
+lt.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lt
+
+lu.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lu
+
+mh.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mh
+
+mq.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mq
+
+my.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.my
+
+ne.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ne
+
+nl.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.nl
+
+nu.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.nu
+
+pm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pm
+
+pw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pw
+
+rw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.rw
+
+si.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.si
+
+sk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sk
+
+sm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sm
+
+so.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.so
+
+sr.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sr
+
+ss.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ss
+
+su.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.su
+
+sx.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sx
+
+tc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tc
+
+td.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.td
+
+tf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tf
+
+tg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tg
+
+tk.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tk
+
+tm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tm
+
+us.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.us
+
+va.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.va
+
+vc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.vc
+
+ve.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ve
+second arts.ve. co.ve. com.ve. info.ve. net.ve. org.ve. radio.ve. web.ve. gob.ve. gov.ve. edu.ve. int.ve. mil.ve. tec.ve.
+
+vg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.vg
+
+vi.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.vi
+second co.vi. org.vi. com.vi. net.vi. k12.vi.
+
+vn.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.vn
+second com.vn. biz.vn. edu.vn. gov.vn. net.vn. org.vn. int.vn. ac.vn. pro.vn. info.vn. health.vn. name.vn.
+
+vu.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.vu
+
+wf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.wf
+
+ws.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ws
+second org.ws. gov.ws. edu.ws.
+
+ye.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ye
+second co.ye. me.ye. com.ye. ltd.ye. net.ye. org.ye. plc.ye. gov.ye. 
+
+yt.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.yt
+
+za.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.za
+second ac.za. co.za. edu.za. gov.za. law.za. mil.za. nom.za. org.za. school.za.
+
+zm.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.zm
+second ac.zm. co.zm. com.zm. edu.zm. gov.zm. net.zm. org.zm. sch.zm. 
+
+zw.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.zw
+second co.zw. ac.zw. org.zw.
+
+xn--90ais.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.by
+
+xn--80ao21a.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kz
+
+xn--l1acc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mn
+
+xn--mix082f.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mo
+
+xn--mix891f.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mo
+
+xn--d1alf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.mk
+
+xn--p1ai.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ru
+
+xn--90a3ac.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.rs
+
+xn--j1amh.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ua
+
+xn--lgbbat1ad8j.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.dz
+
+xn--wgbh1c.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.eg
+
+xn--mgbbh1a71e.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.in
+
+xn--mgbtx2b.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.iq
+
+xn--mgba3a4f16a.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ir
+
+xn--mgbayh7gpa.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.jo
+
+xn--ygbi2ammx.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ps
+
+xn--mgbai9azgqp6j.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.pk
+
+xn--wgbl6a.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.qa
+
+xn--mgberp4a5d4ar.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sa
+
+xn--ogbpf8fl.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sy
+
+xn--pgbs0dh.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tn
+
+xn--mgbpl2fh.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sd
+
+xn--mgb2ddes.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ye
+
+xn--54b7fta0cc.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bd
+
+xn--90ae.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.bg
+
+xn--45brj9c.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.in
+
+xn--mgbaam7a8h.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ae
+
+xn--mgb9awbf.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.om
+
+xn--mgbx4cd0ab.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.my
+
+xn--mgbc0a9azcg.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ma
+
+xn--h2brj9c.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.in
+
+xn--fpcrj9c3d.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.in
+
+xn--gecrj9c.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.in
+
+xn--s9brj9c.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.in
+
+xn--xkc2dl3a5ee0h.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.in
+
+xn--fzc2c9e2c.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lk
+
+xn--xkc2al3hye2a.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.lk
+
+xn--clchc0ea0b2g2a9gcd.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sg
+
+xn--fiqs8s.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cn
+
+xn--fiqz9s.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.cn
+
+xn--kprw13d.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tw
+
+xn--kpry57d.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.tw
+
+xn--yfro4i67o.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.sg
+
+xn--qxam.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.gr
+
+xn--node.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.ge
+
+xn--3e0b707e.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.kr
+
+xn--y9a3aq.
+type CcTld
+wiki https://en.wikipedia.org/wiki/.am
+

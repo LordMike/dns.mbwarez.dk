@@ -1,0 +1,222 @@
+﻿@using DnsMbwarezDk.Code
+@using TldServer = WebShared.Db.TldServer
+@model DnsMbwarezDk.Models.Data.DataViewModel
+
+@{
+    ViewBag.Title = "TLD " + Model.Domain.Domain;
+}
+
+<h2>@Model.Domain.Domain <small>TLD</small></h2>
+
+<div class="col-md-12">
+    <div class="col-md-4 panel panel-default">
+        <h3>Details <small>@HtmlUtilities.DomainToIdn(Model.Domain.Domain)</small></h3>
+        <table class="table table-condensed">
+            <tr>
+                <th>Type</th>
+                <td>@Html.Partial("_ViewTldType", Model.Domain.Info.Type)</td>
+            </tr>
+            <tr>
+                <th>Level</th>
+                <td>@Html.Partial("_ViewTldLevel", Model.Domain.DomainLevel)</td>
+            </tr>
+            @if (!string.IsNullOrEmpty(Model.Domain.ParentTld))
+            {
+                <tr>
+                    <th>Parent</th>
+                    <td><a href="@Url.Action("View", "Data", new { id = HtmlUtilities.PrepTldForUrl(Model.Domain.ParentTld) }, null)">@Model.Domain.ParentTld</a></td>
+                </tr>
+            }
+            @if (Model.ChildTlds.Any())
+            {
+                <tr>
+                    <th>Childs</th>
+                    <td>
+                        @foreach (var child in Model.ChildTlds)
+                        {
+                            <a href="@Url.Action("View", "Data", new { id = HtmlUtilities.PrepTldForUrl(child) }, null)">@child</a>
+                        }
+                    </td>
+                </tr>
+            }
+            @if (!string.IsNullOrEmpty(Model.Domain.Info.Wikipage))
+            {
+                <tr>
+                    <th>Wiki</th>
+                    <td><a href="@Model.Domain.Info.Wikipage">read more</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-md-4 panel panel-default">
+        <h3>Supports</h3>
+        <table class="table table-condensed">
+            <tr>
+                <th>AXFR</th>
+                <td>
+                    @if (Model.CombinedFeatures.SupportsAxfr)
+                    {
+                        @Html.Partial("_ViewPositive", "Yes")
+                    }
+                    else
+                    {
+                        @Html.Partial("_ViewNegative", "No")
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>NSEC</th>
+                <td>
+                    @if (Model.CombinedFeatures.SupportsNsec)
+                    {
+                        @Html.Partial("_ViewPositive", "Yes")
+                    }
+                    else
+                    {
+                        @Html.Partial("_ViewNegative", "No")
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>NSEC3</th>
+                <td>
+                    @if (Model.CombinedFeatures.SupportsNsec3)
+                    {
+                        @Html.Partial("_ViewPositive", "Yes")
+                    }
+                    else
+                    {
+                        @Html.Partial("_ViewNegative", "No")
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Transport</th>
+                <td>
+                    @if (Model.CombinedFeatures.SupportsUdp)
+                    {
+                        @Html.Partial("_ViewProtocol", "UDP")
+                    }
+                    @if (Model.CombinedFeatures.SupportsTcp)
+                    {
+                        @Html.Partial("_ViewProtocol", "TCP")
+                    }
+                    @if (Model.CombinedFeatures.SupportsTcpFtp)
+                    {
+                        @Html.Partial("_ViewProtocol", "FTP")
+                    }
+                    @if (Model.CombinedFeatures.SupportsTcpRsync)
+                    {
+                        @Html.Partial("_ViewProtocol", "Rsync")
+                    }
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4 panel panel-default">
+        <h3>Technical</h3>
+        <table class="table table-condensed">
+            <tr>
+                <th>SOA Refresh</th>
+                <td>@Html.Partial("_ViewSoaTime", Model.Domain.SoaRefreshTime)</td>
+            </tr>
+            <tr>
+                <th>Master</th>
+                <td>@Model.Domain.MasterServerDnsName</td>
+            </tr>
+            <tr>
+                <th>Responsible</th>
+                <td>@HtmlUtilities.DomainToEmail(Model.Domain.MasterResponsibleName)</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+@{
+    long largestSoa = Model.Domain.Servers.Any() ? Model.Domain.Servers.Max(s => s.Refresh.Serial) : 0;
+}
+
+<div class="col-md-12">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>IP</th>
+                <th></th>
+                <th>ASN</th>
+                <th style="text-align: right">Age</th>
+                <th>SOA</th>
+                <th>Reachable</th>
+                <th>Features</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (TldServer server in Model.Domain.Servers)
+            {
+                <tr>
+                    <td>@server.ServerIp</td>
+                    <td><small>(@server.ServerName)</small></td>
+                    <td><small>@Model.IpInfos[server.ServerIp].ASN</small></td>
+                    <td style="text-align: right">
+                        <div>Refresh: @server.Refresh.LastCheckUtc</div>
+                        <div>Test: @server.Refresh.LastCheckUtc</div>
+                    </td>
+                    <td>
+                        @if (server.Refresh.Serial != largestSoa)
+                        {
+                            <span class="label label-warning" title="This server is outdated">@server.Refresh.Serial</span>
+                        }
+                        else
+                        {
+                            <span class="label label-default">@server.Refresh.Serial</span>
+                        }
+                    </td>
+                    <td>
+                        @if (server.Refresh.LastCheckSuccess)
+                        {
+                            <span class="label label-default">Yes</span>
+                        }
+                        else
+                        {
+                            @Html.Partial("_ViewNegative", "No")
+                        }
+                    </td>
+                    <td>
+                        @Html.Partial("_ViewIpType", server.ServerType)
+                        @if (server.Test.FeatureSet.SupportsAxfr)
+                        {
+                            @Html.Partial("_ViewFeature", "AXFR")
+                        }
+                        @if (server.Test.FeatureSet.SupportsNsec)
+                        {
+                            @Html.Partial("_ViewFeature", "NSEC")
+                        }
+                        @if (server.Test.FeatureSet.SupportsNsec3)
+                        {
+                            @Html.Partial("_ViewFeature", "NSEC3")
+                        }
+                        @if (server.Test.FeatureSet.SupportsTcp)
+                        {
+                            @Html.Partial("_ViewProtocol", "TCP")
+                        }
+                        @if (server.Test.FeatureSet.SupportsUdp)
+                        {
+                            @Html.Partial("_ViewProtocol", "UDP")
+                        }
+                        @if (server.Test.FeatureSet.SupportsTcpFtp)
+                        {
+                            @Html.Partial("_ViewProtocol", "FTP")
+                        }
+                        @if (server.Test.FeatureSet.SupportsTcpRsync)
+                        {
+                            @Html.Partial("_ViewProtocol", "Rsync")
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("details", "ViewServerIp", "Data", new { id = server.ServerIp }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

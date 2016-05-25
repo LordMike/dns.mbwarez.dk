@@ -1,0 +1,72 @@
+﻿@using DnsMbwarezDk.Models.Data
+@using WebShared.Db
+@model DnsMbwarezDk.Models.Data.DataServersModel
+
+@{
+    ViewBag.Title = "TLD Servers";
+}
+
+<h2>Currrent TLD Servers <small>(@Model.Servers.Count servers)</small></h2>
+
+<div class="col-md-12">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>IP</th>
+                <th>TLDs</th>
+                <th>Name</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Features</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (DataServerListItem server in Model.Servers)
+            {
+                <tr>
+                    <td>@server.Ip</td>
+                    <td>@server.DomainCount</td>
+                    <td>@server.Name</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        @if (server.SupportsIpv4)
+                        {
+                            @Html.Partial("_ViewIpType", ServerType.IPv4)
+                        }
+                        @if (server.SupportsIpv6)
+                        {
+                            @Html.Partial("_ViewIpType", ServerType.IPv6)
+                        }
+                        @if (server.FeatureSet.SupportsAxfr)
+                        {
+                            @Html.Partial("_ViewFeature", "AXFR")
+                        }
+                        @if (server.FeatureSet.SupportsTcp)
+                        {
+                            @Html.Partial("_ViewProtocol", "TCP")
+                        }
+                        @if (server.FeatureSet.SupportsUdp)
+                        {
+                            @Html.Partial("_ViewProtocol", "UDP")
+                        }
+                        @if (server.FeatureSet.SupportsTcpFtp)
+                        {
+                            @Html.Partial("_ViewProtocol", "FTP")
+                        }
+                        @if (server.FeatureSet.SupportsTcpRsync)
+                        {
+                            @Html.Partial("_ViewProtocol", "Rsync")
+                        }
+                    </td>
+                    <td>@Html.ActionLink("details", "ViewServerIp", "Data", new { id = server.Ip }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,11 @@
+﻿@using WebShared.Db
+@model WebShared.Db.ServerType
+
+@if (Model == ServerType.IPv4)
+{
+    <span class="label label-info">IPv4</span>
+}
+else if (Model == ServerType.IPv6)
+{
+    <span class="label label-info">IPv6</span>
+}

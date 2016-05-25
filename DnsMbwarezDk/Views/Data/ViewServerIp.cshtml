@@ -1,0 +1,193 @@
+﻿@using DnsMbwarezDk.Code
+@using WebShared.Db
+@using TldServer = WebShared.Db.TldServer
+@model DnsMbwarezDk.Models.Data.DataViewIpModel
+
+@{
+    ViewBag.Title = "TLD Server";
+}
+
+<h2>TLD Server <small>@Model.ServerIp</small></h2>
+
+<div class="col-md-12">
+    <div class="col-md-5 panel panel-default">
+        <h3>Details <small>@Model.ServerIp</small></h3>
+        <table class="table table-condensed">
+            <tr>
+                <th>Type</th>
+                <td>
+                    @if (Model.Tlds.Any(s => s.ServerType == ServerType.IPv4))
+                    {
+                        <span class="label label-info">IPv4</span>
+                    }
+                    @if (Model.Tlds.Any(s => s.ServerType == ServerType.IPv6))
+                    {
+                        <span class="label label-info">IPv6</span>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>TLDs</th>
+                <td>@Model.Tlds.Count</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>@Model.IpInfo.Country</td>
+            </tr>
+            <tr>
+                <th>ASN</th>
+                <td>
+                    @if (!string.IsNullOrEmpty(Model.IpInfo.ASN))
+                    {
+                        @Model.IpInfo.ASN <a href="http://ipinfo.io/@Model.IpInfo.ASN">more</a>
+                    }
+                    else
+                    {
+                        <span class="label label-default">unknown</span>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><a href="http://ipinfo.io/@Model.IpInfo.Ip">more info on @Model.IpInfo.Ip</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-offset-1 col-md-6 panel panel-default">
+        <h3>Supports</h3>
+        <table class="table table-condensed">
+            <tr>
+                <th>AXFR</th>
+                <td>
+                    @if (Model.CombinedFeatureSet.SupportsAxfr)
+                    {
+                        @Html.Partial("_ViewPositive", "Yes")
+                    }
+                    else
+                    {
+                        @Html.Partial("_ViewNegative", "No")
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>NSEC</th>
+                <td>
+                    @if (Model.CombinedFeatureSet.SupportsNsec)
+                    {
+                        @Html.Partial("_ViewPositive", "Yes")
+                    }
+                    else
+                    {
+                        @Html.Partial("_ViewNegative", "No")
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>NSEC3</th>
+                <td>
+                    @if (Model.CombinedFeatureSet.SupportsNsec3)
+                    {
+                        @Html.Partial("_ViewPositive", "Yes")
+                    }
+                    else
+                    {
+                        @Html.Partial("_ViewNegative", "No")
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th>Transport</th>
+                <td>
+                    @if (Model.CombinedFeatureSet.SupportsUdp)
+                    {
+                        @Html.Partial("_ViewProtocol", "UDP")
+                    }
+                    @if (Model.CombinedFeatureSet.SupportsTcp)
+                    {
+                        @Html.Partial("_ViewProtocol", "TCP")
+                    }
+                    @if (Model.CombinedFeatureSet.SupportsTcpFtp)
+                    {
+                        @Html.Partial("_ViewProtocol", "FTP")
+                    }
+                    @if (Model.CombinedFeatureSet.SupportsTcpRsync)
+                    {
+                        @Html.Partial("_ViewProtocol", "Rsync")
+                    }
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>TLD</th>
+                <th></th>
+                <th>NS name</th>
+                <th>Age</th>
+                <th>Alive</th>
+                <th>Features</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (TldServer server in Model.Tlds)
+            {
+                <tr>
+                    <td>@server.Domain</td>
+                    <td>@HtmlUtilities.DomainToIdn(server.Domain)</td>
+                    <td>@server.ServerName</td>
+                    <td style="text-align: right">
+                        <div>Refresh: @server.Refresh.LastCheckUtc</div>
+                        <div>Test: @server.Test.LastCheckUtc</div>
+                    </td>
+                    <td>
+                        @if (server.Refresh.LastCheckSuccess)
+                        {
+                            @Html.Partial("_ViewPositive", "Yes")
+                        }
+                        else
+                        {
+                            @Html.Partial("_ViewNegative", "No")
+                        }
+                    </td>
+                    <td>
+                        @if (server.Test.FeatureSet.SupportsAxfr)
+                        {
+                            @Html.Partial("_ViewFeature", "AXFR")
+                        }
+                        @if (server.Test.FeatureSet.SupportsNsec)
+                        {
+                            @Html.Partial("_ViewFeature", "NSEC")
+                        }
+                        @if (server.Test.FeatureSet.SupportsNsec3)
+                        {
+                            @Html.Partial("_ViewFeature", "NSEC3")
+                        }
+                        @if (server.Test.FeatureSet.SupportsTcp)
+                        {
+                            @Html.Partial("_ViewProtocol", "TCP")
+                        }
+                        @if (server.Test.FeatureSet.SupportsUdp)
+                        {
+                            @Html.Partial("_ViewProtocol", "UDP")
+                        }
+                        @if (server.Test.FeatureSet.SupportsTcpFtp)
+                        {
+                            @Html.Partial("_ViewProtocol", "FTP")
+                        }
+                        @if (server.Test.FeatureSet.SupportsTcpRsync)
+                        {
+                            @Html.Partial("_ViewProtocol", "Rsync")
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("details", "View", "Data", new { id = HtmlUtilities.PrepTldForUrl(server.Domain) }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

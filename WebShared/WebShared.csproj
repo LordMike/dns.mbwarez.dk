@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D1F0F7F-2543-4868-9273-A59A4E41BEE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebShared</RootNamespace>
+    <AssemblyName>WebShared</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Db\DnsDb.cs" />
+    <Compile Include="Db\Domain.cs" />
+    <Compile Include="Db\DomainIp.cs" />
+    <Compile Include="Db\DomainScrapeHistory.cs" />
+    <Compile Include="Db\IpInfo.cs" />
+    <Compile Include="Db\ServerFeatureSet.cs" />
+    <Compile Include="Db\ServerSoaRefresh.cs" />
+    <Compile Include="Db\ServerTest.cs" />
+    <Compile Include="Db\TldDomain.cs" />
+    <Compile Include="Db\TldInfo.cs" />
+    <Compile Include="Db\TldServer.cs" />
+    <Compile Include="Migrations\201504231550147_Initial.cs" />
+    <Compile Include="Migrations\201504231550147_Initial.Designer.cs">
+      <DependentUpon>201504231550147_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504231609231_Infoes.cs" />
+    <Compile Include="Migrations\201504231609231_Infoes.Designer.cs">
+      <DependentUpon>201504231609231_Infoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504231637047_ServerRefreshObject_SoaValues.cs" />
+    <Compile Include="Migrations\201504231637047_ServerRefreshObject_SoaValues.Designer.cs">
+      <DependentUpon>201504231637047_ServerRefreshObject_SoaValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504231639449_AddServerType.cs" />
+    <Compile Include="Migrations\201504231639449_AddServerType.Designer.cs">
+      <DependentUpon>201504231639449_AddServerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504231734550_AddIpInfoes.cs" />
+    <Compile Include="Migrations\201504231734550_AddIpInfoes.Designer.cs">
+      <DependentUpon>201504231734550_AddIpInfoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504231907271_AddDomainLevels.cs" />
+    <Compile Include="Migrations\201504231907271_AddDomainLevels.Designer.cs">
+      <DependentUpon>201504231907271_AddDomainLevels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504231949170_MoveStuffToFeatureSets.cs" />
+    <Compile Include="Migrations\201504231949170_MoveStuffToFeatureSets.Designer.cs">
+      <DependentUpon>201504231949170_MoveStuffToFeatureSets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504262131206_AddDomainScraping.cs" />
+    <Compile Include="Migrations\201504262131206_AddDomainScraping.Designer.cs">
+      <DependentUpon>201504262131206_AddDomainScraping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504262144422_AddDomainScrapingHistory.cs" />
+    <Compile Include="Migrations\201504262144422_AddDomainScrapingHistory.Designer.cs">
+      <DependentUpon>201504262144422_AddDomainScrapingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504272009595_AddNameservers.cs" />
+    <Compile Include="Migrations\201504272009595_AddNameservers.Designer.cs">
+      <DependentUpon>201504272009595_AddNameservers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504272012340_ChangeTimeName.cs" />
+    <Compile Include="Migrations\201504272012340_ChangeTimeName.Designer.cs">
+      <DependentUpon>201504272012340_ChangeTimeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505011033579_RelaxScrapedDomainsModel.cs" />
+    <Compile Include="Migrations\201505011033579_RelaxScrapedDomainsModel.Designer.cs">
+      <DependentUpon>201505011033579_RelaxScrapedDomainsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506242049026_AddFtpRsyncTesting.cs" />
+    <Compile Include="Migrations\201506242049026_AddFtpRsyncTesting.Designer.cs">
+      <DependentUpon>201506242049026_AddFtpRsyncTesting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Utilities\DateHelper.cs" />
+    <Compile Include="Utilities\DnsUtilities.cs" />
+    <Compile Include="Utilities\Extensions.cs" />
+    <Compile Include="Utilities\NameserverState.cs" />
+    <Compile Include="Db\ServerType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Serializer.cs" />
+    <Compile Include="Db\TldType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DnsLib2\DnsLib2.csproj">
+      <Project>{ED77DF60-FD23-427C-B440-C71A82B6FDAB}</Project>
+      <Name>DnsLib2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201504231550147_Initial.resx">
+      <DependentUpon>201504231550147_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504231609231_Infoes.resx">
+      <DependentUpon>201504231609231_Infoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504231637047_ServerRefreshObject_SoaValues.resx">
+      <DependentUpon>201504231637047_ServerRefreshObject_SoaValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504231639449_AddServerType.resx">
+      <DependentUpon>201504231639449_AddServerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504231734550_AddIpInfoes.resx">
+      <DependentUpon>201504231734550_AddIpInfoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504231907271_AddDomainLevels.resx">
+      <DependentUpon>201504231907271_AddDomainLevels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504231949170_MoveStuffToFeatureSets.resx">
+      <DependentUpon>201504231949170_MoveStuffToFeatureSets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504262131206_AddDomainScraping.resx">
+      <DependentUpon>201504262131206_AddDomainScraping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504262144422_AddDomainScrapingHistory.resx">
+      <DependentUpon>201504262144422_AddDomainScrapingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504272009595_AddNameservers.resx">
+      <DependentUpon>201504272009595_AddNameservers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504272012340_ChangeTimeName.resx">
+      <DependentUpon>201504272012340_ChangeTimeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505011033579_RelaxScrapedDomainsModel.resx">
+      <DependentUpon>201505011033579_RelaxScrapedDomainsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506242049026_AddFtpRsyncTesting.resx">
+      <DependentUpon>201506242049026_AddFtpRsyncTesting.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,39 @@
+﻿@model long
+
+@{
+    TimeSpan time = TimeSpan.FromSeconds(Model);
+    
+    string partDays = time.Days > 0 ? time.Days.ToString("N0") + " days " : string.Empty;
+    string partTime = string.Empty;
+
+    if (time.Hours > 0)
+    {
+        if (time.Minutes == 0 && time.Seconds == 0)
+        {
+            partTime = time.ToString("h' hours'");
+        }
+        else
+        {
+            partTime = time.ToString("hh':'mm':'ss");
+        }
+    }
+    else if (time.Minutes > 0)
+    {
+        partTime = time.ToString(time.Seconds == 0 ? "m' minutes'" : "mm':'ss");
+    }
+    else if (time.Seconds > 0)
+    {
+        partTime = time.ToString("ss' seconds'");
+    }
+    
+}
+
+@*@if (anyHours)
+{
+    <span>@Model.ToString("N0") seconds (@time.Hours hours)</span>
+}
+else
+{
+    <span>@Model.ToString("N0") seconds (@time)</span>
+}*@
+<span>@Model.ToString("N0") seconds (@partDays@partTime)</span>

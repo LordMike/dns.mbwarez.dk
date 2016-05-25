@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED77DF60-FD23-427C-B440-C71A82B6FDAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DnsLib2</RootNamespace>
+    <AssemblyName>DnsLib2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DnsUtils.cs" />
+    <Compile Include="DnsClientExtensions.cs" />
+    <Compile Include="IDnsClient.cs" />
+    <Compile Include="Records\BuildOptRecord.cs" />
+    <Compile Include="Records\BuildRecordA.cs" />
+    <Compile Include="Records\BuildRecordAAAA.cs" />
+    <Compile Include="Records\BuildRecordBase.cs" />
+    <Compile Include="Records\BuildRecordCNAME.cs" />
+    <Compile Include="Records\BuildRecordNS.cs" />
+    <Compile Include="Records\BuildRecordSOA.cs" />
+    <Compile Include="Records\BuildRecordTXT.cs" />
+    <Compile Include="DnsMessageBuilder.cs" />
+    <Compile Include="Records\Nsec3HashAlgorithm_.cs" />
+    <Compile Include="Records\RecordViewAAAA.cs" />
+    <Compile Include="Records\RecordViewA.cs" />
+    <Compile Include="Common\FQDN.cs" />
+    <Compile Include="Records\RecordViewCNAME.cs" />
+    <Compile Include="Records\RecordViewDefault.cs" />
+    <Compile Include="Common\DnsEncoder.cs" />
+    <Compile Include="DnsMessageView.cs" />
+    <Compile Include="Enums\DnsFlags.cs" />
+    <Compile Include="DnsHeaderView.cs" />
+    <Compile Include="DnsQuestionView.cs" />
+    <Compile Include="Records\DnsRecordView.cs" />
+    <Compile Include="Enums\DnsOpcode.cs" />
+    <Compile Include="Enums\QClass.cs" />
+    <Compile Include="Enums\QType.cs" />
+    <Compile Include="Enums\ResponseCode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Records\RecordViewMX.cs" />
+    <Compile Include="Records\RecordViewNS.cs" />
+    <Compile Include="Records\RecordViewNSEC.cs" />
+    <Compile Include="Records\RecordViewNSEC3.cs" />
+    <Compile Include="Records\RecordViewNSEC3PARAM.cs" />
+    <Compile Include="Records\RecordViewSOA.cs" />
+    <Compile Include="Records\RecordViewTXT.cs" />
+    <Compile Include="TcpDnsClient.cs" />
+    <Compile Include="UdpDnsClient.cs" />
+    <Compile Include="Utilities\ObjectPool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{F1362352-2BEF-49D3-B3FC-75EDB37F6A4A}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
