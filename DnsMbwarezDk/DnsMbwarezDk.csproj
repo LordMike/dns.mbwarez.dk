@@ -187,17 +187,6 @@
     <Content Include="App_Data\config_tld.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="App_Data\UpdateTool\DnsLib2.dll" />
-    <Content Include="App_Data\UpdateTool\EntityFramework.dll" />
-    <Content Include="App_Data\UpdateTool\EntityFramework.SqlServer.dll" />
-    <Content Include="App_Data\UpdateTool\RestSharp.dll" />
-    <Content Include="App_Data\UpdateTool\Shared.dll" />
-    <Content Include="App_Data\UpdateTool\Shared.pdb" />
-    <Content Include="App_Data\UpdateTool\TldScraper.exe" />
-    <Content Include="App_Data\UpdateTool\TldScraper.pdb" />
-    <Content Include="App_Data\UpdateTool\WebShared.dll" />
-    <Content Include="App_Data\UpdateTool\WebTester.exe" />
-    <Content Include="App_Data\UpdateTool\WebUpdateTlds.exe" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -231,9 +220,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <Content Include="App_Data\UpdateTool\WebTester.exe.config" />
-    <Content Include="App_Data\UpdateTool\WebUpdateTlds.exe.config" />
-    <Content Include="App_Data\UpdateTool\TldScraper.exe.config" />
     <None Include="Properties\PublishProfiles\dns.mbwarez.dk.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Icon.png" />
