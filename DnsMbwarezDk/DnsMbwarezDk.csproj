@@ -129,6 +129,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\TldScraper\" />
+    <Folder Include="App_Data\WebTester\" />
+    <Folder Include="App_Data\WebUpdateTlds\" />
     <Folder Include="Models\Home\" />
   </ItemGroup>
   <ItemGroup>
