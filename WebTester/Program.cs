@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data.Entity;
 using System.Diagnostics;
 using System.IO;
@@ -8,7 +7,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
 using System.Net.Sockets;
-using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using DnsLib2;
@@ -16,7 +14,6 @@ using DnsLib2.Enums;
 using DnsLib2.Records;
 using RestSharp;
 using Shared;
-using SharpRaven;
 using WebShared.Db;
 using WebShared.Utilities;
 using IpInfo = WebShared.Db.IpInfo;
@@ -35,7 +32,7 @@ namespace WebTester
         private static bool _filterIpv6;
         private static CancellationTokenSource _cancellationToken = new CancellationTokenSource();
 
-        private static RavenClient _ravenClient;
+        private static ConsoleLogger _ravenClient;
 
         static void Main(string[] args)
         {
@@ -45,7 +42,7 @@ namespace WebTester
                 return;
             }
 
-            Sentry.ApplySentry();
+            _ravenClient = ConsoleLogger.ApplySentry();
 
             Console.CancelKeyPress += (sender, eventArgs) =>
             {

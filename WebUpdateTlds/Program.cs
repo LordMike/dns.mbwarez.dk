@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Data.Entity;
-using System.Reflection;
 using DnsLib2.Common;
 using DnsLib2.Records;
-using SharpRaven;
+using Shared;
 using WebShared.Db;
 using WebShared.Utilities;
 using TldInfo = WebShared.Db.TldInfo;
@@ -28,7 +26,7 @@ namespace WebUpdateTlds
 
         private static StreamWriter _logWriter;
 
-        private static RavenClient _ravenClient;
+        private static ConsoleLogger _ravenClient;
 
         private static void Main(string[] args)
         {
@@ -38,12 +36,7 @@ namespace WebUpdateTlds
                 return;
             }
 
-            string ravenDsn = ConfigurationManager.AppSettings["sentry_dsn"];
-            if (ravenDsn != null)
-            {
-                _ravenClient = new RavenClient(ravenDsn);
-                _ravenClient.Logger = Assembly.GetExecutingAssembly().GetName().Name;
-            }
+            _ravenClient = ConsoleLogger.ApplySentry();
 
             Console.CancelKeyPress += (sender, eventArgs) =>
             {
@@ -52,16 +45,7 @@ namespace WebUpdateTlds
 
                 Console.WriteLine("Cancellation requested");
             };
-
-            AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
-            {
-                Exception exception = eventArgs.ExceptionObject as Exception;
-                if (exception == null)
-                    return;
-
-                _ravenClient?.CaptureException(exception);
-            };
-
+            
             _ravenClient?.CaptureMessage("Began run");
 
             // Config

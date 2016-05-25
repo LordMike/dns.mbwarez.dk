@@ -45,10 +45,6 @@
     <Reference Include="RestSharp">
       <HintPath>..\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="SharpRaven, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpRaven.1.5.1\lib\net45\SharpRaven.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -73,6 +69,10 @@
     <ProjectReference Include="..\DnsLib2\DnsLib2.csproj">
       <Project>{ED77DF60-FD23-427C-B440-C71A82B6FDAB}</Project>
       <Name>DnsLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{F1362352-2BEF-49D3-B3FC-75EDB37F6A4A}</Project>
+      <Name>Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebShared\WebShared.csproj">
       <Project>{0d1f0f7f-2543-4868-9273-a59a4e41bee7}</Project>

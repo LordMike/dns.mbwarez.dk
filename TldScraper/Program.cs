@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using DnsLib2;
@@ -15,8 +13,6 @@ using DnsLib2.Common;
 using DnsLib2.Enums;
 using DnsLib2.Records;
 using Shared;
-using SharpRaven;
-using SharpRaven.Data;
 using WebShared.Db;
 using WebShared.Utilities;
 
@@ -26,18 +22,13 @@ namespace TldScraper
     {
         private static CancellationTokenSource _cancellationToken = new CancellationTokenSource();
 
-        private static RavenClient _ravenClient;
+        private static ConsoleLogger _ravenClient;
 
         static void Main(string[] args)
         {
             IPEndPoint recursiveServer = new IPEndPoint(IPAddress.Parse("192.168.1.21"), 53);
 
-            string ravenDsn = ConfigurationManager.AppSettings["sentry_dsn"];
-            if (ravenDsn != null)
-            {
-                _ravenClient = new RavenClient(ravenDsn);
-                _ravenClient.Logger = Assembly.GetExecutingAssembly().GetName().Name;
-            }
+            _ravenClient = ConsoleLogger.ApplySentry();
 
             Console.CancelKeyPress += (sender, eventArgs) =>
             {
@@ -46,16 +37,7 @@ namespace TldScraper
 
                 Console.WriteLine("Cancellation requested");
             };
-
-            AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
-            {
-                Exception exception = eventArgs.ExceptionObject as Exception;
-                if (exception == null)
-                    return;
-
-                _ravenClient?.CaptureException(exception);
-            };
-
+            
             _ravenClient?.CaptureMessage("Began run");
 
             // Find eligible domains
@@ -131,7 +113,7 @@ namespace TldScraper
                         ex.Data.Add("Domain", domain.Domain);
                         ex.Data.Add("DomainServer", point.ToString());
 
-                        _ravenClient?.CaptureException(ex, level: ErrorLevel.Warning);
+                        _ravenClient?.CaptureException(ex, level: ConsoleLoggerErrorLevel.Warning);
 
                         Console.WriteLine("AXFR Failed " + point + ", " + domain.Domain + ": " + ex.Message);
                     }
@@ -143,7 +125,7 @@ namespace TldScraper
             catch (Exception ex)
             {
                 ex.Data.Add("Domain", domain.Domain);
-                _ravenClient?.CaptureException(ex, level: ErrorLevel.Warning);
+                _ravenClient?.CaptureException(ex, level: ConsoleLoggerErrorLevel.Warning);
 
                 Console.WriteLine("AXFR Failed " + domain.Domain + ": " + ex.Message);
                 return;
@@ -263,7 +245,7 @@ namespace TldScraper
                                     inner.Data.Add("DomainServer", server.ToString());
                                     inner.Data.Add("Query", todo.ToString());
 
-                                    _ravenClient?.CaptureException(inner, level: ErrorLevel.Warning);
+                                    _ravenClient?.CaptureException(inner, level: ConsoleLoggerErrorLevel.Warning);
 
                                     if (inner is TaskCanceledException)
                                     {
