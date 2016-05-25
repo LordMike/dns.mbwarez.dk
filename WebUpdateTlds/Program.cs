@@ -96,12 +96,14 @@ namespace WebUpdateTlds
 
                 using (DnsDb db = new DnsDb())
                 {
-                    db.Database.ExecuteSqlCommand("UPDATE TldDomains SET IsActive = 0");
+                    HashSet<FQDN> allCurrentDomains = new HashSet<FQDN>(db.Domains.Select(s => s.Domain).AsEnumerable().Select(s => new FQDN(s)));
 
                     foreach (FQDN fqdn in roots.Concat(secondLevels))
                     {
                         if (_cancellationToken.IsCancellationRequested)
                             break;
+
+                        allCurrentDomains.Remove(fqdn);
 
                         string domain = fqdn.Name;
                         TldDomain domainItem = db.Domains.Include(s => s.Servers).SingleOrDefault(s => s.Domain == domain);
@@ -187,12 +189,20 @@ namespace WebUpdateTlds
                                 serverItem.ServerName = nameserver.Name;
                             }
 
+                        // Remove old servers
                         foreach (var server in currentServers.Values)
                         {
                             domainItem.Servers.Remove(server);
 
                             Log("Main", $"Removing server {fqdn.Name} / {server.ServerIp}");
                         }
+                    }
+
+                    // Deactivate old domains
+                    foreach (FQDN domain in allCurrentDomains)
+                    {
+                        TldDomain dom = db.Domains.Single(s => s.Domain == domain.ToString());
+                        dom.IsActive = false;
                     }
 
                     Log("Main", "Saving to DB");
