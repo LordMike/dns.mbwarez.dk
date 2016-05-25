@@ -6,15 +6,6 @@ using SharpRaven.Data;
 
 namespace Shared
 {
-    public enum ConsoleLoggerErrorLevel
-    {
-        Fatal,
-        Error,
-        Warning,
-        Info,
-        Debug,
-    }
-
     public class ConsoleLogger
     {
         private RavenClient _ravenClient;
