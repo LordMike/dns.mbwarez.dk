@@ -129,7 +129,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\TldScraper\" />
     <Folder Include="App_Data\WebTester\" />
     <Folder Include="App_Data\WebUpdateTlds\" />
     <Folder Include="Models\Home\" />
@@ -155,6 +154,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TldScraper\DnsLib2.dll" />
+    <Content Include="App_Data\TldScraper\DnsLib2.pdb" />
+    <Content Include="App_Data\TldScraper\EntityFramework.dll" />
+    <Content Include="App_Data\TldScraper\EntityFramework.SqlServer.dll" />
+    <Content Include="App_Data\TldScraper\EntityFramework.SqlServer.xml" />
+    <Content Include="App_Data\TldScraper\EntityFramework.xml" />
+    <Content Include="App_Data\TldScraper\Newtonsoft.Json.dll" />
+    <Content Include="App_Data\TldScraper\Newtonsoft.Json.xml" />
+    <Content Include="App_Data\TldScraper\Shared.dll" />
+    <Content Include="App_Data\TldScraper\Shared.pdb" />
+    <Content Include="App_Data\TldScraper\SharpRaven.dll" />
+    <Content Include="App_Data\TldScraper\SharpRaven.pdb" />
+    <Content Include="App_Data\TldScraper\SharpRaven.xml" />
+    <Content Include="App_Data\TldScraper\TldScraper.exe" />
+    <Content Include="App_Data\TldScraper\TldScraper.pdb" />
+    <Content Include="App_Data\TldScraper\WebShared.dll" />
+    <Content Include="App_Data\TldScraper\WebShared.pdb" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -168,6 +184,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="App_Data\TldScraper\TldScraper.exe.config" />
     <None Include="Properties\PublishProfiles\dns.mbwarez.dk.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Icon.png" />
