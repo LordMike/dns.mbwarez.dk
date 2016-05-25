@@ -41,13 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base32.cs" />
-    <Compile Include="DomainState.cs" />
-    <Compile Include="ObjectPool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serializer.cs" />
-    <Compile Include="ThreadedQueue.cs" />
     <Compile Include="ValueCycler.cs" />
-    <Compile Include="Zone.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

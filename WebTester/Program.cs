@@ -15,6 +15,7 @@ using DnsLib2;
 using DnsLib2.Enums;
 using DnsLib2.Records;
 using RestSharp;
+using Shared;
 using SharpRaven;
 using WebShared.Db;
 using WebShared.Utilities;
@@ -44,12 +45,7 @@ namespace WebTester
                 return;
             }
 
-            string ravenDsn = ConfigurationManager.AppSettings["sentry_dsn"];
-            if (ravenDsn != null)
-            {
-                _ravenClient = new RavenClient(ravenDsn);
-                _ravenClient.Logger = Assembly.GetExecutingAssembly().GetName().Name;
-            }
+            Sentry.ApplySentry();
 
             Console.CancelKeyPress += (sender, eventArgs) =>
             {
@@ -57,15 +53,6 @@ namespace WebTester
                 eventArgs.Cancel = true;
 
                 Console.WriteLine("Cancellation requested");
-            };
-
-            AppDomain.CurrentDomain.UnhandledException += (sender, eventArgs) =>
-            {
-                Exception exception = eventArgs.ExceptionObject as Exception;
-                if (exception == null)
-                    return;
-
-                _ravenClient?.CaptureException(exception);
             };
 
             _ravenClient?.CaptureMessage("Began run");

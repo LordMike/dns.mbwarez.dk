@@ -39,8 +39,8 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RestSharp">
@@ -72,6 +72,10 @@
     <ProjectReference Include="..\DnsLib2\DnsLib2.csproj">
       <Project>{ed77df60-fd23-427c-b440-c71a82b6fdab}</Project>
       <Name>DnsLib2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{F1362352-2BEF-49D3-B3FC-75EDB37F6A4A}</Project>
+      <Name>Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebShared\WebShared.csproj">
       <Project>{0D1F0F7F-2543-4868-9273-A59A4E41BEE7}</Project>
