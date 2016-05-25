@@ -16,7 +16,6 @@ using DnsLib2.Enums;
 using DnsLib2.Records;
 using RestSharp;
 using SharpRaven;
-using SharpRaven.Data;
 using WebShared.Db;
 using WebShared.Utilities;
 using IpInfo = WebShared.Db.IpInfo;
