@@ -129,8 +129,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\WebTester\" />
-    <Folder Include="App_Data\WebUpdateTlds\" />
     <Folder Include="Models\Home\" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +169,43 @@
     <Content Include="App_Data\TldScraper\TldScraper.pdb" />
     <Content Include="App_Data\TldScraper\WebShared.dll" />
     <Content Include="App_Data\TldScraper\WebShared.pdb" />
+    <Content Include="App_Data\WebTester\DnsLib2.dll" />
+    <Content Include="App_Data\WebTester\DnsLib2.pdb" />
+    <Content Include="App_Data\WebTester\EntityFramework.dll" />
+    <Content Include="App_Data\WebTester\EntityFramework.SqlServer.dll" />
+    <Content Include="App_Data\WebTester\EntityFramework.SqlServer.xml" />
+    <Content Include="App_Data\WebTester\EntityFramework.xml" />
+    <Content Include="App_Data\WebTester\Newtonsoft.Json.dll" />
+    <Content Include="App_Data\WebTester\Newtonsoft.Json.xml" />
+    <Content Include="App_Data\WebTester\RestSharp.dll" />
+    <Content Include="App_Data\WebTester\RestSharp.xml" />
+    <Content Include="App_Data\WebTester\Shared.dll" />
+    <Content Include="App_Data\WebTester\Shared.pdb" />
+    <Content Include="App_Data\WebTester\SharpRaven.dll" />
+    <Content Include="App_Data\WebTester\SharpRaven.pdb" />
+    <Content Include="App_Data\WebTester\SharpRaven.xml" />
+    <Content Include="App_Data\WebTester\WebShared.dll" />
+    <Content Include="App_Data\WebTester\WebShared.pdb" />
+    <Content Include="App_Data\WebTester\WebTester.exe" />
+    <Content Include="App_Data\WebTester\WebTester.pdb" />
+    <Content Include="App_Data\WebUpdateTlds\config_tld.txt" />
+    <Content Include="App_Data\WebUpdateTlds\DnsLib2.dll" />
+    <Content Include="App_Data\WebUpdateTlds\DnsLib2.pdb" />
+    <Content Include="App_Data\WebUpdateTlds\EntityFramework.dll" />
+    <Content Include="App_Data\WebUpdateTlds\EntityFramework.SqlServer.dll" />
+    <Content Include="App_Data\WebUpdateTlds\EntityFramework.SqlServer.xml" />
+    <Content Include="App_Data\WebUpdateTlds\EntityFramework.xml" />
+    <Content Include="App_Data\WebUpdateTlds\Newtonsoft.Json.dll" />
+    <Content Include="App_Data\WebUpdateTlds\Newtonsoft.Json.xml" />
+    <Content Include="App_Data\WebUpdateTlds\Shared.dll" />
+    <Content Include="App_Data\WebUpdateTlds\Shared.pdb" />
+    <Content Include="App_Data\WebUpdateTlds\SharpRaven.dll" />
+    <Content Include="App_Data\WebUpdateTlds\SharpRaven.pdb" />
+    <Content Include="App_Data\WebUpdateTlds\SharpRaven.xml" />
+    <Content Include="App_Data\WebUpdateTlds\WebShared.dll" />
+    <Content Include="App_Data\WebUpdateTlds\WebShared.pdb" />
+    <Content Include="App_Data\WebUpdateTlds\WebUpdateTlds.exe" />
+    <Content Include="App_Data\WebUpdateTlds\WebUpdateTlds.pdb" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -185,6 +220,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="App_Data\TldScraper\TldScraper.exe.config" />
+    <Content Include="App_Data\WebUpdateTlds\WebUpdateTlds.exe.config" />
+    <Content Include="App_Data\WebTester\WebTester.exe.config" />
     <None Include="Properties\PublishProfiles\dns.mbwarez.dk.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Icon.png" />
