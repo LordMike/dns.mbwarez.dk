@@ -4,7 +4,8 @@
 packages/
 .vs/
 
-.user
+*.user
+
 DnsMbwarezDk/App_Data/WebUpdateTlds/
 DnsMbwarezDk/App_Data/WebTester/
 DnsMbwarezDk/App_Data/TldScraper/
