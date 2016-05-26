@@ -67,28 +67,28 @@ namespace WebTester
                 DateTime boundsTest = DateTime.UtcNow.AddDays(-14);
                 DateTime boundsIpData = DateTime.UtcNow.AddDays(-31);
 
-                Log("Main", string.Format("Beginning Refresh ({0:yyyy-MM-dd HH:mm:ss})", DateTime.Now));
+                Log("Main", $"Beginning Refresh ({DateTime.Now:yyyy-MM-dd HH:mm:ss})");
 
                 sw.Restart();
                 HandleRefresh();
                 sw.Stop();
 
-                Log("Main", string.Format("Finished Refresh {0:N0} ms ({1:yyyy-MM-dd HH:mm:ss})", sw.ElapsedMilliseconds, DateTime.Now));
+                Log("Main", $"Finished Refresh {sw.ElapsedMilliseconds:N0} ms ({DateTime.Now:yyyy-MM-dd HH:mm:ss})");
 
-                Log("Main", string.Format("Beginning Test ({0:yyyy-MM-dd HH:mm:ss})", DateTime.Now));
+                Log("Main", $"Beginning Test ({DateTime.Now:yyyy-MM-dd HH:mm:ss})");
 
                 sw.Restart();
                 HandleTest(boundsTest);
                 sw.Stop();
 
-                Log("Main", string.Format("Finished Test {0:N0} ms ({1:yyyy-MM-dd HH:mm:ss})", sw.ElapsedMilliseconds, DateTime.Now));
+                Log("Main", $"Finished Test {sw.ElapsedMilliseconds:N0} ms ({DateTime.Now:yyyy-MM-dd HH:mm:ss})");
 
-                Log("Main", string.Format("Beginning IP data update ({0:yyyy-MM-dd HH:mm:ss})", DateTime.Now));
+                Log("Main", $"Beginning IP data update ({DateTime.Now:yyyy-MM-dd HH:mm:ss})");
                 sw.Restart();
                 HandleIpInfo(boundsIpData);
                 sw.Stop();
 
-                Log("Main", string.Format("Finished IP data update {0:N0} ms ({1:yyyy-MM-dd HH:mm:ss})", sw.ElapsedMilliseconds, DateTime.Now));
+                Log("Main", $"Finished IP data update {sw.ElapsedMilliseconds:N0} ms ({DateTime.Now:yyyy-MM-dd HH:mm:ss})");
 
                 Log("Main", "Finished");
             }
@@ -139,7 +139,7 @@ namespace WebTester
                 toAdd = todoIps.Except(todoItems.Select(x => x.Ip)).AsEnumerable().Select(s => new IpInfo { Ip = s }).ToList();
             }
 
-            Log("Main-ip", "IP Infoes to fetch: " + (todoItems.Count + toAdd.Count));
+            Log("Main-ip", $"IP Infoes to fetch: {todoItems.Count + toAdd.Count:N0}");
 
             RestClient rest = new RestClient(new Uri("http://ipinfo.io/"));
 
@@ -155,13 +155,13 @@ namespace WebTester
                 }
                 catch (Exception ex)
                 {
-                    Log("Main-ip", "Got exception: " + ex.Message);
+                    Log("Main-ip", $"Got exception: {ex.Message}");
                     continue;
                 }
 
                 if (result.StatusCode != HttpStatusCode.OK)
                 {
-                    Log("Main-ip", "Hit a limit (code was: " + result.StatusCode + " " + result.StatusDescription + ")");
+                    Log("Main-ip", $"Hit a limit (code was: {result.StatusCode} {result.StatusDescription})");
                     break;
                 }
 
@@ -182,7 +182,7 @@ namespace WebTester
 
                 info.LastUpdateUtc = DateTime.UtcNow;
 
-                Log("Main-ip", "Updated " + info.Ip);
+                Log("Main-ip", $"Updated {info.Ip}");
                 modified.Add(info.Ip);
             }
 
@@ -197,12 +197,12 @@ namespace WebTester
                     db.IpInfos.Attach(s);
                     db.Entry(s).State = EntityState.Modified;
                 });
-                Log("Main-ip", string.Format("Prepped DB in {0:N0} ms", swDb.ElapsedMilliseconds));
+                Log("Main-ip", $"Prepped DB in {swDb.ElapsedMilliseconds:N0} ms");
 
                 swDb.Restart();
                 db.SaveChanges();
                 swDb.Stop();
-                Log("Main-ip", string.Format("Saved to DB in {0:N0} ms", swDb.ElapsedMilliseconds));
+                Log("Main-ip", $"Saved to DB in {swDb.ElapsedMilliseconds:N0} ms");
             }
         }
 
@@ -211,6 +211,7 @@ namespace WebTester
             // Fetch todolists
             List<TldServer> todo;
 
+            int total;
             using (DnsDb db = new DnsDb())
             {
                 IQueryable<TldServer> tmpQuery = db.Servers.Where(s => s.Test.LastCheckUtc < bounds);
@@ -218,15 +219,17 @@ namespace WebTester
                     tmpQuery = tmpQuery.Where(s => s.ServerType == ServerType.IPv4);
 
                 todo = tmpQuery.OrderBy(s => s.Test.LastCheckUtc).Take(MaxToTestPrRound).ToList();
+                total = tmpQuery.Count();
             }
 
-            Log("Main-test", "Servers to (re-)test: " + todo.Count);
+            Log("Main-test", $"Servers to (re-)test: {todo.Count:N0}, total: {total:N0}");
 
             DateTime boundsUpdate = DateTime.UtcNow;
 
             using (UdpDnsClient clientV4 = new UdpDnsClient(AddressFamily.InterNetwork))
             using (UdpDnsClient clientV6 = new UdpDnsClient(AddressFamily.InterNetworkV6))
             {
+                int done = 0;
                 Parallel.ForEach(todo, new ParallelOptions { MaxDegreeOfParallelism = 4 }, server =>
                 {
                     if (_cancellationToken.IsCancellationRequested)
@@ -265,12 +268,12 @@ namespace WebTester
 
                     sw.Stop();
 
-                    Log("Main-test", "Tested: " + server.Domain + " (" + server.ServerName + " - " + server.ServerIp + ") " + sw.ElapsedMilliseconds + " ms");
+                    Log("Main-test", $"Tested {Interlocked.Increment(ref done):N0} of {todo.Count:N0}: {server.Domain} ({server.ServerName} - {server.ServerIp}) {sw.ElapsedMilliseconds:N0} ms");
                 });
             }
 
             List<TldServer> toSave = todo.Where(s => s.Test.LastCheckUtc >= boundsUpdate).ToList();
-            Log("Main-test", "Saving: " + toSave.Count + " servers to DB");
+            Log("Main-test", $"Saving: {toSave.Count:N0} servers to DB");
 
             Stopwatch swDb = new Stopwatch();
             using (DnsDb db = new DnsDb())
@@ -289,12 +292,12 @@ namespace WebTester
                     });
 
                     swDb.Stop();
-                    Log("Main-test", string.Format("Prepped {0:N0} items for DB in {1:N0} ms", thisRound.Count, swDb.ElapsedMilliseconds));
+                    Log("Main-test", $"Prepped {thisRound.Count:N0} items for DB in {swDb.ElapsedMilliseconds:N0} ms");
 
                     swDb.Restart();
                     db.SaveChanges();
                     swDb.Stop();
-                    Log("Main-test", string.Format("Saved {0:N0} items to DB in {1:N0} ms", thisRound.Count, swDb.ElapsedMilliseconds));
+                    Log("Main-test", $"Saved {thisRound.Count:N0} items to DB in {swDb.ElapsedMilliseconds:N0} ms");
                 }
             }
         }
@@ -304,6 +307,7 @@ namespace WebTester
             // Fetch todolists
             List<TldServer> todo;
 
+            int total;
             using (DnsDb db = new DnsDb())
             {
                 const int minTime = 3600;
@@ -314,15 +318,17 @@ namespace WebTester
                     tmpQuery = tmpQuery.Where(s => s.ServerType == ServerType.IPv4);
 
                 todo = tmpQuery.OrderBy(s => s.Refresh.LastCheckUtc).Take(MaxToCheckPrRound).ToList();
+                total = tmpQuery.Count();
             }
 
-            Log("Main-refresh", "Servers to refresh  : " + todo.Count);
+            Log("Main-refresh", $"Servers to refresh  : {todo.Count:N0}, total: {total:N0}");
 
             DateTime boundsUpdate = DateTime.UtcNow;
 
             using (UdpDnsClient clientV4 = new UdpDnsClient(AddressFamily.InterNetwork))
             using (UdpDnsClient clientV6 = new UdpDnsClient(AddressFamily.InterNetworkV6))
             {
+                int done = 0;
                 Parallel.ForEach(todo, new ParallelOptions { MaxDegreeOfParallelism = 4 }, server =>
                 {
                     if (_cancellationToken.IsCancellationRequested)
@@ -348,60 +354,62 @@ namespace WebTester
 
                     sw.Stop();
 
-                    Log("Main-refresh", "Refreshed: " + server.Domain + " (" + server.ServerName + " - " + server.ServerIp + ") " + sw.ElapsedMilliseconds + " ms");
+                    Log("Main-refresh", $"Refreshed {Interlocked.Increment(ref done):N0} of {todo.Count:N0}: {server.Domain} ({server.ServerName} - {server.ServerIp}) {sw.ElapsedMilliseconds:N0} ms");
                 });
             }
 
             List<TldServer> toSave = todo.Where(s => s.Refresh.LastCheckUtc >= boundsUpdate).ToList();
-            Log("Main-refresh", "Saving: " + toSave.Count + " servers to DB");
 
             Stopwatch swDb = new Stopwatch();
             using (DnsDb db = new DnsDb())
             {
-                for (int i = 0; ; i += MaxSavePerRound)
+                db.Database.CommandTimeout = 3600;
+
+                Dictionary<string, DomanRefreshTuple> domainUpdates = new Dictionary<string, DomanRefreshTuple>();
+
+                Log("Main-refresh", $"Saving: {toSave.Count:N0} servers to DB");
+
+                foreach (TldServer server in toSave)
                 {
-                    Dictionary<string, Tuple<string, string, int>> domainUpdates = new Dictionary<string, Tuple<string, string, int>>();
+                    db.Servers.Attach(server);
+                    db.Entry(server).ComplexProperty(s => s.Refresh).IsModified = true;
 
-                    if (!toSave.Skip(i).Any())
-                        break;
-
-                    swDb.Restart();
-                    toSave.Skip(i).Take(MaxSavePerRound).ForEach(server =>
-                    {
-                        db.Servers.Attach(server);
-                        db.Entry(server).ComplexProperty(s => s.Refresh).IsModified = true;
-
-                        if (server.Refresh.LastCheckSuccess)
-                            domainUpdates[server.Domain] = new Tuple<string, string, int>(server.Refresh.MasterResponsibleName, server.Refresh.MasterServerDnsName, server.Refresh.RefreshTime);
-                    });
-
-                    List<string> domainNames = domainUpdates.Keys.ToList();
-                    List<TldDomain> domainItems = db.Domains.Where(s => domainNames.Contains(s.Domain)).ToList();
-
-                    foreach (TldDomain domain in domainItems)
-                    {
-                        Tuple<string, string, int> updateItem;
-                        if (!domainUpdates.TryGetValue(domain.Domain, out updateItem))
-                            continue;
-
-                        domain.MasterResponsibleName = updateItem.Item1;
-                        domain.MasterServerDnsName = updateItem.Item2;
-                        domain.SoaRefreshTime = updateItem.Item3;
-                    }
-                    swDb.Stop();
-                    Log("Main-refresh", string.Format("Prepped {0:N0} (at {1:N0} of {2:N0}) items for DB in {3:N0} ms", domainItems.Count, i + domainItems.Count, toSave.Count, swDb.ElapsedMilliseconds));
-
-                    swDb.Restart();
-                    db.SaveChanges();
-                    swDb.Stop();
-                    Log("Main-refresh", string.Format("Saved {0:N0} (at {1:N0} of {2:N0}) items to DB in {3:N0} ms", domainItems.Count, i + domainItems.Count, toSave.Count, swDb.ElapsedMilliseconds));
+                    if (server.Refresh.LastCheckSuccess)
+                        domainUpdates[server.Domain] = new DomanRefreshTuple(server.Refresh.MasterResponsibleName, server.Refresh.MasterServerDnsName, server.Refresh.RefreshTime);
                 }
+
+                swDb.Restart();
+                db.SaveChanges();
+                swDb.Stop();
+
+                Log("Main-refresh", $"Saved {toSave.Count:N0} items in DB in {swDb.ElapsedMilliseconds:N0} ms");
+
+                Log("Main-refresh", $"Saving: {domainUpdates.Count:N0} TLD stats to DB");
+
+                swDb.Restart();
+                List<string> domainNames = domainUpdates.Keys.ToList();
+                List<TldDomain> domainItems = db.Domains.Where(s => domainNames.Contains(s.Domain)).ToList();
+
+                foreach (TldDomain domain in domainItems)
+                {
+                    DomanRefreshTuple updateItem;
+                    if (!domainUpdates.TryGetValue(domain.Domain, out updateItem))
+                        continue;
+
+                    domain.MasterResponsibleName = updateItem.MasterResponsibleName;
+                    domain.MasterServerDnsName = updateItem.MasterServerDnsName;
+                    domain.SoaRefreshTime = updateItem.SoaRefreshTime;
+                }
+
+                swDb.Stop();
+
+                Log("Main-refresh", $"Saved {domainItems.Count:N0} TLD items to DB in {swDb.ElapsedMilliseconds:N0} ms");
             }
         }
 
         private static void Log(string category, string line)
         {
-            string logLine = "[" + category + "] " + line;
+            string logLine = $"[{category}] {line}";
 
             Console.WriteLine(logLine);
             _logWriter.WriteLine(logLine);
